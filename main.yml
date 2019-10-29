@@ -1,9 +1,11 @@
 - name: test aws alb provisioning with terraform
   hosts: localhost
+  connection: local
+  environment:
+    AWS_ACCESS_KEY_ID: "{{ survey_aws_access_key_id }}"
+    AWS_SECRET_ACCESS_KEY: "{{ survey_aws_secret_access_key }}"
 
   tasks:
 
     - include_role:
         name: aws-alb
-      vars:
-        role_context: "roles/{{ role_name }}"
