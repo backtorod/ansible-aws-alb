@@ -1,0 +1,9 @@
+- name: test aws alb provisioning with terraform
+  hosts: localhost
+
+  tasks:
+
+    - include_role:
+        name: aws-alb
+      vars:
+        role_context: "roles/{{ role_name }}"

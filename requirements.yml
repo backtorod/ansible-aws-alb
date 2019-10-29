@@ -1,0 +1,3 @@
+- src: git+https://github.com/backtorod/ansible-role-aws-alb.git
+  version: master
+  name: aws-alb
